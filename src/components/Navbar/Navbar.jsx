@@ -6,8 +6,8 @@ const Navbar = () => {
     return (
         <div>
             {/* navbar */}
-            <div className="navbar bg-pink-400 p-3 rounded-md ">
-                <div className="navbar-start">
+            <div className="navbar flex-col md:flex-row bg-pink-400  rounded-md items-center ">
+                <div className=" md:navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -30,7 +30,7 @@ const Navbar = () => {
                         <a className="btn btn-ghost normal-case text-xl">Marry-plan</a>
                     </div>
                 </div>
-                <div className="navbar-center hidden lg:flex">
+                <div className=" hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         <li><NavLink to={"/"}>Home</NavLink></li>
                         <li tabIndex={0}>
@@ -46,8 +46,8 @@ const Navbar = () => {
                         <li><NavLink to={"/Gallery"}> Gallery</NavLink></li>
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <Link> <button className='btn mx-3'> Register</button></Link>
+                <div className="flex flex-col md:flex-row space-y-4 my-5 items-cente md:gap-5">
+                    <Link> <button className='btn '> Register</button></Link>
                     <Link> <button className='btn'> Log in</button></Link>
                 </div>
             </div>

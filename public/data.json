@@ -1,0 +1,51 @@
+[
+    {
+      "id": 1,
+      "service_name": "Entertainment",
+      "short_details": "Exciting entertainment options to elevate your wedding experience.",
+      "full_details": "Our entertainment package is designed to elevate your wedding experience to new heights. We offer a wide range of entertainment options, including live bands, DJs, dancers, magicians, and more. Whether you want a high-energy dance floor or a serene background ambiance, our entertainment professionals will tailor their performance to your preferences, ensuring that your guests have a memorable time at your wedding. Let us set the stage for a celebration filled with joy and excitement.",
+      "image": "https://i.ibb.co/bWkVpY2/drums-music-photography-wallpaper-preview.jpg",
+      "price": 3000
+    },
+    {
+      "id": 2,
+      "service_name": "Decoration",
+      "short_details": "Stunning decor to transform your wedding venue.",
+      "full_details": "Transform your wedding venue into a breathtaking masterpiece with our decoration services. Our team of skilled decorators specializes in creating stunning decor that aligns perfectly with your wedding theme and vision. From exquisite floral arrangements to elegant lighting, we pay meticulous attention to every detail to create a magical atmosphere that leaves a lasting impression on your guests. Let us turn your dream wedding decor into a reality.",
+      "image": "https://i.ibb.co/qDr6vCC/pexels-atul-maurya-1042152.jpg",
+      "price": 2500
+    },
+    {
+      "id": 3,
+      "service_name": "Wedding Walls",
+      "short_details": "Elegant wedding walls to enhance the ambiance.",
+      "full_details": "Our wedding walls are the perfect addition to enhance the ambiance of your wedding venue. These elegant and customizable walls serve as a stunning backdrop for your ceremony, reception, or photo booth. Choose from a variety of designs, colors, and floral arrangements to match your wedding theme and create a picture-perfect setting that will awe your guests and provide an exquisite backdrop for your cherished moments.",
+      "image": "https://i.ibb.co/6JNB4Hs/91-T99-h-W2-DL.jpg",
+      "price": 1500
+    },
+    {
+      "id": 4,
+      "service_name": "Photography",
+      "short_details": "Capture your wedding moments with professional photography.",
+      "full_details": "Capture every precious moment of your special day with our professional photography services. Our talented photographers have a keen eye for detail and a passion for storytelling. They will work closely with you to understand your vision and preferences, ensuring that they document every emotion, smile, and tear. From candid shots to posed portraits, our photography team will provide you with a timeless collection of images that you'll treasure for a lifetime.",
+      "image": "https://i.ibb.co/BC6fNRX/photo-1540173196447-4a4acda7007e.jpg",
+      "price": 4000
+    },
+    {
+      "id": 5,
+      "service_name": "Furniture",
+      "short_details": "High-quality furniture to enhance your wedding decor.",
+      "full_details": "Elevate the comfort and style of your wedding with our high-quality furniture options. We offer a wide range of stylish and comfortable seating arrangements, from elegant chairs and sofas to chic tables and accessories. Our furniture collection can be customized to match your wedding theme and color scheme, providing not only functional seating but also adding a touch of sophistication to your event decor. Create a welcoming and cozy atmosphere for your guests with our premium furniture options.",
+      "image": "https://i.ibb.co/c8C45tG/asian-wedding-decor-bridal.jpg",
+      "price": 2000
+    },
+    {
+      "id": 6,
+      "service_name": "Catering",
+      "short_details": "Delicious catering options to delight your guests' taste buds.",
+      "full_details": "Delight your guests' taste buds with our exceptional catering services. We offer a diverse and mouthwatering menu that caters to a variety of palates. From delectable appetizers to exquisite main courses and sumptuous desserts, our culinary team prides itself on using the finest ingredients to create dishes that are as visually appealing as they are delicious. Let us take care of the culinary aspect of your wedding, ensuring that your guests enjoy a memorable dining experience that reflects your taste and style.",
+      "image": "https://i.ibb.co/09T7142/images.jpg",
+      "price": 5000
+    }
+  ]
+  

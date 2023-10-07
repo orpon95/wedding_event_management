@@ -10,6 +10,8 @@ import Root from './components/Root/Root.jsx';
 import Home from './components/Home/Home.jsx';
 import About from './components/About/About.jsx';
 import Gallery from './components/Gallery/Gallery.jsx';
+import Card from './components/card/card.jsx';
+import Banner from './components/Banner/Banner.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,15 +20,24 @@ const router = createBrowserRouter([
     children : [
       {
         path:"/",
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader:()=>fetch("/data.json"),
       },
       {
         path: "/About",
-        element: <About></About>
+        element: <About></About>,
       },
       {
         path : "/Gallery",
-        element:<Gallery></Gallery>
+        element:<Gallery></Gallery>,
+      },
+      {
+        path:"/Card",
+        element: <Card></Card>,
+      },
+      {
+        path:"/Banner",
+        element:<Banner></Banner>
       }
     ]
   },
