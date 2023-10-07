@@ -1,8 +1,16 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { authContext } from '../../AuthProvider/AuthProvider';
 
 const Navbar = () => {
+    const { user, logOut } = useContext(authContext)
+    // signout
+    const handleSignOut = () => {
+         logOut()
+            .then()
+            .error()
+    }
     return (
         <div>
             {/* navbar */}
@@ -46,9 +54,15 @@ const Navbar = () => {
                         <li><NavLink to={"/Gallery"}> Gallery</NavLink></li>
                     </ul>
                 </div>
-                <div className="flex flex-col md:flex-row space-y-4 my-5 items-cente md:gap-5">
-                    <Link> <button className='btn '> Register</button></Link>
-                    <Link> <button className='btn'> Log in</button></Link>
+                <div className="flex flex-col md:flex-row space-y-3 md:space-y-4 my-5 items-cente md:gap-5">
+                    <NavLink to={"/Register"} > <button className='btn '> Register</button></NavLink>
+                    {
+                        user ? <button onClick={handleSignOut} className='btn'> sign out</button> :
+
+                            <NavLink to={"/Login"}> <button className='btn'> Log in</button></NavLink>
+
+
+                    }
                 </div>
             </div>
         </div>

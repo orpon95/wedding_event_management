@@ -12,32 +12,50 @@ import About from './components/About/About.jsx';
 import Gallery from './components/Gallery/Gallery.jsx';
 import Card from './components/card/card.jsx';
 import Banner from './components/Banner/Banner.jsx';
+import Login from './components/Login/Login.jsx';
+import Register from './components/Register/Register.jsx';
+import AuthProvider from './AuthProvider/AuthProvider.jsx';
+import Details from './components/Details/Details.jsx';
+import PrivateRoute from './PrivateRoute/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    children : [
+    children: [
       {
-        path:"/",
+        path: "/",
         element: <Home></Home>,
-        loader:()=>fetch("/data.json"),
+        loader: () => fetch("/data.json"),
       },
       {
         path: "/About",
         element: <About></About>,
       },
       {
-        path : "/Gallery",
-        element:<Gallery></Gallery>,
+        path: "/Gallery",
+        element: <Gallery></Gallery>,
       },
       {
-        path:"/Card",
+        path: "/Card",
         element: <Card></Card>,
       },
       {
-        path:"/Banner",
-        element:<Banner></Banner>
+        path: "/Banner",
+        element: <Banner></Banner>,
+      },
+      {
+        path: "/Login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/Register",
+        element: <Register></Register>,
+      },
+      {
+        path: "/Details/:id",
+        element: <PrivateRoute><Details></Details></PrivateRoute>,
+        loader: ()=>fetch("/data.json")
       }
     ]
   },
@@ -45,6 +63,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <AuthProvider>
       <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )
