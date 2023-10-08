@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/Gallery",
-        element: <Gallery></Gallery>,
+        element: <PrivateRoute><Gallery></Gallery></PrivateRoute>,
       },
       {
         path: "/Card",

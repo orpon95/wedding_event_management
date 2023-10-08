@@ -14,7 +14,8 @@ const Details = () => {
     console.log(singleData , intId)
     return (
         <div>
-            <h1>{singleData.full_details}</h1>
+            <h1 className='text-3xl font-bold text-center border-b-2 border-pink-400   my-4'>{singleData.service_name}</h1>
+            <h1 className='text-2xl font-medium my-6 text-center italic'>{singleData.full_details}</h1>
         </div>
     );
 };
