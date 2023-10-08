@@ -3,6 +3,7 @@ import React, { useContext, useState } from 'react';
 import { authContext } from '../../AuthProvider/AuthProvider';
 import  { Component } from 'react';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 
 
 const Register = () => {
@@ -88,6 +89,11 @@ const Register = () => {
                                 <button type='submit' className="btn btn-primary">Register</button>
                             </div>
                         </form>
+                        <div className='my-5'>
+                            <h1 className='text-center'>Alreay registered !!!  
+                                <Link to={"/Login"}><span className='text-base text-blue-600 underline'> log in here</span></Link>
+                            </h1>
+                        </div>
                     </div>
                 </div>
             </div>
