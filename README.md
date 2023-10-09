@@ -1,8 +1,11 @@
-# React + Vite
+# five features
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- user can select many srvices re;ated to weeding plan
+- user can see about our client
+- user can log in and register
+- user can sign in with google
+- user cant access gallery and about link without login 
+- our site name may plan
+- out site link: https://wedding-event-management-89da0.web.app/Login
