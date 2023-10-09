@@ -12,6 +12,7 @@ const Login = () => {
     console.log(location);
     const [errors, setError] = useState(null)
     const { signin } = useContext(authContext)
+    const [name , setName] = useState("")
 
 
     const handleLogin = e => {
@@ -20,6 +21,7 @@ const Login = () => {
         const name = form.get("name")
         const email = form.get("email")
         const password = form.get("password")
+        // const name = form.get("name")
         console.log(email, password, name)
 
 
@@ -98,6 +100,20 @@ const Login = () => {
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleLogin} className="card-body">
 
+                            {/* Name field */}
+                            {/* <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Name</span>
+                                </label>
+                                <input name='name' type="text" placeholder="name" className="input input-bordered"  />
+                            </div> */}
+                            {/* pic field */}
+                            {/* <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Photo</span>
+                                </label>
+                                <input name='pic' type="text" placeholder="enter your photo URL" className="input input-bordered"  />
+                            </div> */}
                             {/* email field */}
                             <div className="form-control">
                                 <label className="label">

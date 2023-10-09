@@ -1,14 +1,17 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { authContext } from '../../AuthProvider/AuthProvider';
 
 const Navbar = () => {
     const { user, logOut,googlesign } = useContext(authContext)
+    const [loggedinUser,setLoggedInUser] = useState("")
     // signout
     const handleSignOut = () => {
          logOut()
-            .then()
+            .then( ()=>{
+                setLoggedInUser("")
+            })
             .error()
     }
 
@@ -16,10 +19,12 @@ const Navbar = () => {
     const handleGoogle = ()=>{
         googlesign()
         .then(result => {
-            console.log(result.user)
+            // console.log(result.user.photoURL)
+            setLoggedInUser(result.user)
         })
         .catch(err => console.log(err))
     }
+    console.log(loggedinUser.photoURL);
     return (
         <div>
             {/* navbar */}
@@ -73,6 +78,18 @@ const Navbar = () => {
 
                     }
                     <button className='btn' onClick={handleGoogle}>Sign in with google</button>
+                    {
+                        loggedinUser&& <div>
+                            <h1 className='bg-pink-100 p-2 rounded-lg font-bold flex items-center '>
+                                {/* <span> <img src={loggedinUser.photoURL} alt="" /></span> */}
+                                <p><img className='w-3/6 rounded-full' src={loggedinUser.photoURL} alt="" /></p>
+
+                              {loggedinUser.displayName}
+                            </h1>
+                            {/* <p> pic : <img src={loggedinUser.photoURL} alt="" /> </p> */}
+                        </div>
+                    }
+
                 </div>
             </div>
         </div>
