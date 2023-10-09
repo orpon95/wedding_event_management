@@ -4,16 +4,20 @@ import { authContext } from '../../AuthProvider/AuthProvider';
 import  { Component } from 'react';
 import Swal from 'sweetalert2';
 import { Link } from 'react-router-dom';
+import { updateProfile } from 'firebase/auth';
 
 
 const Register = () => {
     const [errors, setError] = useState("")
     const { createUser } = useContext(authContext)
+    const [UserInfo,setUserInfo]= useState("")
+    console.log(UserInfo);
 
     const handleRegister = e => {
         e.preventDefault()
         const form = new FormData(e.currentTarget)
         const name = form.get("name")
+        const PicURL = form.get("picURL")
         const email = form.get("email")
         const password = form.get("password")
         console.log(email, password, name)
@@ -33,7 +37,17 @@ const Register = () => {
             setError("")
 
             createUser(email, password)
-                .then(result => console.log(result.user))
+                .then(result => {console.log(result.user)
+                    // setUserInfo(result.user)
+                    updateProfile(result.user, {
+                        displayName:name,
+                        photoURL:PicURL
+                    })
+                    setUserInfo(result.user)
+                    .then()
+                    .catch()
+                
+                })
                 .catch(error => console.error(error))
                 Swal.fire({
                     position: 'top-center',
@@ -66,6 +80,13 @@ const Register = () => {
                                     <span className="label-text">Name</span>
                                 </label>
                                 <input name='name' type="text" placeholder="name" className="input input-bordered" required />
+                            </div>
+                            {/* pic field */}
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">photo url</span>
+                                </label>
+                                <input name='picURL' type="text" placeholder="enter your photo url" className="input input-bordered" required />
                             </div>
                             {/* email field */}
                             <div className="form-control">

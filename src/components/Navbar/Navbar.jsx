@@ -79,6 +79,16 @@ const Navbar = () => {
                     }
                     <button className='btn' onClick={handleGoogle}>Sign in with google</button>
                     {
+                        user && <div className='flex items-center gap-3'>
+                            <h1 className='bg-pink-100 p-2 rounded-lg font-bold'>
+                               {user?.displayName}
+                            </h1>
+                            <p><img className='w-3/6 h-[40px] rounded-full' src={user?.photoURL} alt="" /></p>
+
+
+                        </div>
+                    }
+                    {
                         loggedinUser&& <div>
                             <h1 className='bg-pink-100 p-2 rounded-lg font-bold flex items-center '>
                                 {/* <span> <img src={loggedinUser.photoURL} alt="" /></span> */}

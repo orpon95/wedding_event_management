@@ -5,9 +5,9 @@ const About = () => {
     return (
         <div>
             <h1 className='mt-14 text-center text-4xl font-extrabold border-b-4 color-changing-text'>Who we are  </h1>
-            <div className="card gap-10 card-side bg-base-100 shadow-xl mb-12 ">
+            <div className="card gap-0 md:gap-10 card-side bg-base-100 shadow-xl mb-12 ">
 
-                <figure><img className='h-max' src="https://i.ibb.co/vv4bmz2/Wedding-Planners-in-Kolkata.jpg" alt="Movie" /></figure>
+                <figure><img className='h-full w-full' src="https://i.ibb.co/vv4bmz2/Wedding-Planners-in-Kolkata.jpg" alt="Movie" /></figure>
                 <div className="card-body text-center">
 
                     <h2 className="card-title mx-auto italic color-changing-text">Planner for Your <br />
@@ -34,7 +34,7 @@ const About = () => {
                          we are here to guide you every step of the way. Our services include:</p>
                    
                 </div>
-                <figure><img src="https://i.ibb.co/c8C45tG/asian-wedding-decor-bridal.jpg" alt="Movie" /></figure>
+                <figure><img className='h-full w-full' src="https://i.ibb.co/c8C45tG/asian-wedding-decor-bridal.jpg" alt="Movie" /></figure>
             </div>
 
         </div>
